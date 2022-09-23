@@ -13,8 +13,6 @@ del *.gif
 del *.png
 
 
-:: Sets Policys for account
-
 :localsecpol
 net accounts /minpwlen:8
 net accounts /lockoutthreshold:5
@@ -32,10 +30,13 @@ pause
 auditpol /set /category:* /success:enable
 auditpol /set /category:* /failure:enable
 
-:: Stops FTP 
+::Stops FTP
 net stop msftpsvc
 goto :eof
 
 ::Disables FTP
 sc config msftpsvc start= disabled
 goto :eof
+
+DISM /online /enable-feature /featurename:[SimpleTCP]
+
