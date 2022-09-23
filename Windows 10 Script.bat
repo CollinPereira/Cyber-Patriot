@@ -38,6 +38,6 @@ sc config msftpsvc start= disabled
 goto :eof
 
 ::Disable Simple TCP IP
-DISM /online /enable-feature /featurename:[SimpleTCP]
+Dism /online /Disable-Feature /FeatureName:SimpleTCP
 
 exit
