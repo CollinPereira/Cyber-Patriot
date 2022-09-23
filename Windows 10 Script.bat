@@ -10,7 +10,6 @@ netsh advfirewall reset
 :delfiles
 del *.mp3
 del *.gif
-del *.png
 
 
 :localsecpol
