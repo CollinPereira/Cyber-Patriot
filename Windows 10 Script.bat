@@ -29,6 +29,13 @@ pause
 auditpol /set /category:* /success:enable
 auditpol /set /category:* /failure:enable
 
+::Disable Services
+sc config "PlugPlay" start= disabled
+sc stop "PlugPlay"
+
+
+
+
 ::Stops FTP
 net stop msftpsvc
 goto :eof
