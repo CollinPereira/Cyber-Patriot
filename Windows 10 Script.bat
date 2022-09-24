@@ -7,10 +7,6 @@ set functions=Firewall localsecpol audit delfiles remoteDesk diableGueAdm ftp ss
 netsh advfirewall set allprofiles state on
 netsh advfirewall reset
 
-:delfiles
-del *.mp3
-del *.gif
-
 
 :localsecpol
 net accounts /minpwlen:8
@@ -32,7 +28,6 @@ auditpol /set /category:* /failure:enable
 ::Disable Services
 sc config "PlugPlay" start= disabled
 sc stop "PlugPlay"
-
 
 
 
