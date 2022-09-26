@@ -29,8 +29,6 @@ auditpol /set /category:* /failure:enable
 sc config "PlugPlay" start= disabled
 sc stop "PlugPlay"
 
-
-
 ::Stops FTP
 net stop msftpsvc
 goto :eof
